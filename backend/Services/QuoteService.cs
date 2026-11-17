@@ -76,7 +76,7 @@ public class QuoteService
         }
         if (parcel.WantsInsurance && parcel.DeclaredValue > 5000)
         {
-            // 1.5% of the value above 5000
+            
             price += (parcel.DeclaredValue - 5000) * 1.5m / 100;
         }
 
@@ -111,7 +111,7 @@ public class QuoteService
             baseAmount = 90;
         }
 
-        decimal price = baseAmount + baseAmount * 10 / 100; // 10% fuel charge
+        decimal price = baseAmount + baseAmount * 10 / 100; 
 
         if (destination.IsRemote)
         {
@@ -127,7 +127,7 @@ public class QuoteService
         }
         if (parcel.WantsInsurance && parcel.DeclaredValue > 10000)
         {
-            // 1% of the value above 10000
+            
             price += (parcel.DeclaredValue - 10000) * 1m / 100;
         }
 
@@ -163,7 +163,7 @@ public class QuoteService
 
         decimal baseAmount = row[destination.Zone - 1];
 
-        decimal price = baseAmount + baseAmount * 8 / 100; // 8% fuel charge
+        decimal price = baseAmount + baseAmount * 8 / 100; 
 
         if (destination.IsRemote)
         {
