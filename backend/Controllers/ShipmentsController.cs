@@ -15,14 +15,14 @@ public class ShipmentsController : ControllerBase
         _shipmentService = shipmentService;
     }
 
-    // GET /api/shipments
+    
     [HttpGet]
     public IActionResult GetAll()
     {
         return Ok(_shipmentService.GetAll());
     }
 
-    // POST /api/shipments
+    
     [HttpPost]
     public IActionResult Save([FromBody] SaveShipmentRequest request)
     {
